@@ -23,10 +23,9 @@ public class Jugador extends Futbolista {
 	}
 	
 	@Override
-	public int compareTo(Futbolista o) {
+	public int compareTo(Object o) {
 		Jugador n = (Jugador)o;
 		int goles = n.getGolesMarcados() ;
-		
 		return abs(this.golesMarcados-goles);
 	}
 	
