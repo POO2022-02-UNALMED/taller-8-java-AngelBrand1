@@ -2,8 +2,8 @@ package futbol;
 import static java.lang.Math.abs; 
 
 public class Jugador extends Futbolista {
-	private short golesMarcados;
-	private byte dorsal;
+	public short golesMarcados;
+	public byte dorsal;
 
 	//constructores
 	public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal) {
