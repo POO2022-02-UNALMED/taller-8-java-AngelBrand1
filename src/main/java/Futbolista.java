@@ -1,4 +1,3 @@
-package test;
 
 public abstract class Futbolista implements Comparable<Futbolista> {
 	private String nombre;
