@@ -1,36 +1,22 @@
 package futbol;
-public abstract class Futbolista implements Comparable<Object> {
+
+public abstract class Futbolista implements Comparable{
 	private String nombre;
 	private int edad;
 	private String posicion;
-	//constructor
-	public Futbolista(String nombre, int edad, String posicion) {
-		super();
+	
+	protected Futbolista(String nombre, int edad, String posicion) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.posicion = posicion;
 	}
 	
-	public Futbolista() {
-		this("maradona",30,"delantero");
+	protected Futbolista() {
+		this.nombre = "Maradona";
+		this.edad = 30;
+		this.posicion = "delantero";
 	}
 	
-	//metodos
-	public boolean equals(Futbolista f) {
-		return(this==f);
-	}
-	
-	public String toString() {
-		String s = 
-				String.format(
-				"El futbolista %s tiene %d, y juega de %s"
-				,this.nombre,this.edad,this.posicion);
-				
-		return s;
-	}
-	
-	public abstract boolean jugarConLasManos();
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -54,7 +40,18 @@ public abstract class Futbolista implements Comparable<Object> {
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
-	
-	
-}
 
+	public String toString() {
+		return "El futbolista " +nombre+
+				" tiene " +edad+
+				", y juega de " +posicion;
+	}
+	
+	public boolean equals(Futbolista f) {
+		return (this == f);
+	}
+	
+	public abstract boolean jugarConLasManos();
+	
+	public abstract int compareTo(Object X);
+}
